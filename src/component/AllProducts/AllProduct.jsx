@@ -31,9 +31,9 @@ const AllProduct = () => {
         <Product image={ImgProduct3} name={"Nike Repel Miler"} cate={"Dress"} price={63.85}/>
         <Product image={ImgProduct4} name={"Nike Repel Miler"} cate={"Dress"} price={130.00}/>
         <Product image={ImgProduct5} name={"Nike Repel Miler"} cate={"Dress"} price={53.00}/>
-        <Product image={ImgProduct} name={"Nike Repel Miler"} cate={"Dress"} price={120.50} tag={"SALE"} tagColor={"#1E2832"}/>
+        <Product image={ImgProduct} name={"Nike Repel Miler"} cate={"Dress"} price={120.50} tag="SALE" tagColor={"#1E2832"}/>
         <Product image={ImgProduct7} name={"Nike Repel Miler"} cate={"Dress"} price={120.50} tag={"HOT"} tagColor={"#FF6F61"}/>
-        <Product image={ImgProduct6} name={"Nike Repel Miler"} cate={"Dress"} price={120.50} tag={"SALE"} tagColor={"#1E2832"}/>
+        <Product image={ImgProduct6} name={"Nike Repel Miler"} cate={"Dress"} price={120.50} tag="SALE" tagColor={"#1E2832"}/>
         <Product image={ImgProduct1} name={"Nike Repel Miler"} cate={"Dress"} price={120.50}/>
         <Product image={ImgProduct2} name={"Nike Repel Miler"} cate={"Dress"} price={120.50}/>
       </StyledAllProduct>

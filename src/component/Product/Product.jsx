@@ -32,7 +32,8 @@ const StyledProduct = styled.div`
             font-weight: 600;
             font-size: 16px;
             color: #000000;
-            opacity: ${props => props.tag === "SALE" ? 0.5 : 1};
+            opacity: ${props => props.tag === "SALE" ? 0.5 : 0.8 };
+            text-decoration: ${props => props.tag === "SALE" ? "line-through" : "none"};
         }
     }
     .tags{
@@ -51,9 +52,9 @@ const StyledProduct = styled.div`
     }
     margin-bottom: 24px;
 `
-const Product = ({image, name, cate, price, tag, tagColor}) => {
+const Product = ({image, name, cate, price, tag, tagColor, ...rest}) => {
     return(
-        <StyledProduct tagColor={tagColor}>
+        <StyledProduct tagColor={tagColor} {...rest} tag={tag}>
             <div className="imge">
                 <img src={image} alt="img" />
             </div>
