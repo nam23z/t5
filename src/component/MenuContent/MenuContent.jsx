@@ -40,11 +40,11 @@ const StyledMenuContent = styled.div`
     }
   }
 `
-const MenuContent = ({children}) => {
+const MenuContent = ({title, children , parent}) => {
     return(
         <Container>
-            <StyledMenuContent>
-            <h2>or subscribe to the newsletter</h2>
+            <StyledMenuContent title={title}>
+            <h2>{title}</h2>
         <Box sx={{ width: "100%" }}>
           <Grid
             container
@@ -57,12 +57,11 @@ const MenuContent = ({children}) => {
 
               <NavLink to="/">All Products</NavLink>
 
-              <NavLink to="/tshirt">T-Shirt</NavLink>
+              <NavLink to={parent + "/tshirt"}>T-Shirt</NavLink>
 
-              <NavLink to="/hoodies">Hoodies</NavLink>
+              <NavLink to={parent + "/hoodies"}>Hoodies</NavLink>
 
-              <NavLink to="/jacket">Jacket</NavLink>
-
+              <NavLink to={parent + "/jacket"}>Jacket</NavLink>
               </div>
             </Grid>
             <Grid item xs={1.04}>

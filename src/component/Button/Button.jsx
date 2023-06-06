@@ -6,22 +6,25 @@ const StyledButton = styled.button`
   border: ${props => props.boderColor ? `1px solid ${props.boderColor}` : "none"};
   border-radius: ${props => props.borderRadius};
   background: ${props => props.bgColor};
-  font-weight: 500;
-  line-height: 21px;
   color: ${props => props.textColor};
   font-family: ${props => props.fontFami};
+  font-size: ${props => props.fontSize};
   padding: ${props => props.padding};
+  font-weight: ${props => props.fontWei};
+  line-height: ${props => props.lineHei};
   cursor: pointer;
   img {
     margin-right: 8px;
   }
 `;
-export const Button = ({ width, height, textColor, fontFami, bgColor, boderColor, padding, fontSize, borderRadius, children, ...rest }) => {
+export const Button = ({ width, height, lineHei, textColor, fontFami,fontWei, bgColor, boderColor, padding, fontSize, borderRadius, children, ...rest }) => {
   return <StyledButton 
     width={width}
     height={height}
+    lineHei={lineHei}
     textColor={textColor}
     fontFami={fontFami}
+    fontWei={fontWei}
     bgColor={bgColor}
     boderColor={boderColor}
     fontSize={fontSize}

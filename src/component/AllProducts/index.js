@@ -1,2 +1,3 @@
-import AllProduct from "./AllProduct";
-export default AllProduct;
+import {AllProduct} from "./AllProduct";
+import {AllProductSlide} from "./AllProductSlide";
+export {AllProduct, AllProductSlide};

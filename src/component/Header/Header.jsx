@@ -14,9 +14,9 @@ import hlcR from '../../assets/imgOrther/hlcR.svg';
 const StyledHeader = styled.div`
     position: relative;
   background-color: #F0F0F0;
-  height: 874px;
+  height: 848px;
   h1 {
-    font-family: "AmstelvarAlpha";
+    font-family: 'AmstelvarAlpha';
     font-weight: 400;
     font-size: 42px;
     line-height: 50.4px;
@@ -44,7 +44,7 @@ const StyledHeader = styled.div`
 }
 .Banner{
     font-family: 'Roboto';
-    margin-top: 135px;
+    margin-top: 110px;
 }
 .contentL{
     text-transform: capitalize;
@@ -73,12 +73,12 @@ const StyledHeader = styled.div`
   }
   .hlcL{
     position: absolute;
-    bottom: 18%;
+    bottom: 20%;
   }
   .hlcR{
     position: absolute;
     right: 0;
-    bottom: 20%;
+    bottom: 22%;
   }
 `;
 

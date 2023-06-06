@@ -21,12 +21,14 @@ const StyledNewAndPopular = styled.div`
     text-align: center;
     text-transform: uppercase;
     rotate: -90deg;
-    left: -2%;
-    bottom: -64%;
-    /* transform: translateX(50%); */
+    left: -1.5%;
+    bottom: -59%;
   }
   .imglist{
     position: relative;
+  }
+  .MainContainer{
+    width: 1340px;
   }
 `;
 const NewAndPopularStyles = () => {

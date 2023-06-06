@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import { NumericFormat } from 'react-number-format';
 const StyledProduct = styled.div`
     position: relative;
     font-family: 'Open Sans';
@@ -30,10 +30,19 @@ const StyledProduct = styled.div`
         .price{
             margin-top: 0;
             font-weight: 600;
-            font-size: 16px;
-            color: #000000;
-            opacity: ${props => props.tag === "SALE" ? 0.5 : 0.8 };
-            text-decoration: ${props => props.tag === "SALE" ? "line-through" : "none"};
+            .pri{
+                font-size: ${props => props.tag === "SALE" ? "14px" : "16px"};
+                color: #000000;
+                opacity: ${props => props.tag === "SALE" ? 0.5 : 1 };
+                text-decoration: ${props => props.tag === "SALE" ? "line-through" : "none"};
+            }
+            .sale{
+                display: ${props => props.tag === "SALE" ? "inline-block" : "none"};
+                color: #FF6F61;
+                font-size: 16px;
+                opacity: 1;
+                padding-left: 12px;
+            }
         }
     }
     .tags{
@@ -52,9 +61,9 @@ const StyledProduct = styled.div`
     }
     margin-bottom: 24px;
 `
-const Product = ({image, name, cate, price, tag, tagColor, ...rest}) => {
+const Product = ({image, name, cate, price, tag, sale, tagColor, children, ...rest}) => {
     return(
-        <StyledProduct tagColor={tagColor} {...rest} tag={tag}>
+        <StyledProduct image={image} name={name} cate={cate} price={price} tag={tag} sale={sale} tagColor={tagColor} children={children} {...rest}>
             <div className="imge">
                 <img src={image} alt="img" />
             </div>
@@ -62,7 +71,8 @@ const Product = ({image, name, cate, price, tag, tagColor, ...rest}) => {
             <div className="bottomP">
                 <p className="cate">{cate}</p>
                 <p className="price">
-                    ${price}
+                    <NumericFormat className="pri" value={price} decimalScale={2} fixedDecimalScale prefix={'$'} displayType="text"/>
+                    <NumericFormat className="sale" value={sale} decimalScale={2} fixedDecimalScale prefix={'$'} displayType="text"/>
                     </p>
             </div>
             <div className="tags"><p>{tag}</p></div>
