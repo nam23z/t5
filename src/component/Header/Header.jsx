@@ -37,10 +37,25 @@ const StyledHeader = styled.div`
 }
   .item2 {
     text-align: center;
+    cursor: pointer;
 }
 .item3 {
     display: flex;
     gap: 24.5px;
+}
+.account:hover{
+  cursor: pointer;
+  color: #FF6F61;
+  path{
+    fill: #FF6F61;
+  }
+}
+.Shoping:hover{
+  cursor: pointer;
+  color: #FF6F61;
+  path{
+    fill: #FF6F61;
+  }
 }
 .Banner{
     font-family: 'Roboto';
@@ -66,6 +81,9 @@ const StyledHeader = styled.div`
         font-weight: 400;
         line-height: 34px;
         padding: 19px 26px;
+    }
+    .btn:hover{
+      background-color: #FF6F61;
     }
   }
   .contentR{

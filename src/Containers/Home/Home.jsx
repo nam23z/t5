@@ -10,6 +10,9 @@ import Footer from "../../component/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 const StyledHome = styled.div`
 width: 100%;
+.scrll:hover{
+    background-color: #FF6F61;
+}
 `
 const Home = () => {
     return(
@@ -22,7 +25,7 @@ const Home = () => {
             <BestSeller></BestSeller>
             <ContactInstagram></ContactInstagram>
             <Footer></Footer>
-            <ScrollToTop smooth />
+            <ScrollToTop className="scrll" smooth />
         </StyledHome>
     )
 }

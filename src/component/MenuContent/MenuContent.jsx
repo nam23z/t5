@@ -27,6 +27,9 @@ const StyledMenuContent = styled.div`
         opacity: 0.5;
         color: #000000;
     }
+    a:hover{
+      color: #FF6F61;
+    }
   }
   .nav2{
     font-family: 'Open Sans';
@@ -37,6 +40,9 @@ const StyledMenuContent = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .btn:hover{
+      background-color: #FF6F61;
     }
   }
 `

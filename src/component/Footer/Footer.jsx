@@ -34,7 +34,8 @@ const StyledFooter = styled.div`
       height: 25px;
     }
   }
-  .titl td {
+  .titl th {
+    text-align: left;
     width: 280px;
     text-transform: uppercase;
     font-family: "Open Sans";
@@ -48,6 +49,10 @@ const StyledFooter = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    cursor: pointer;
+  }
+  td:hover{
+    color: #FF6F61;
   }
   .botFooter {
     background-color: #1e2832;
@@ -62,6 +67,12 @@ const StyledFooter = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+      }
+      .CtRight:hover{
+        color: #FF6F61;
+        path{
+          fill: #FF6F61;
+        }
       }
     }
   }
@@ -89,9 +100,9 @@ const Footer = () => {
           </div>
           <table>
             <tr className="titl">
-              <td>catalog</td>
-              <td>about us</td>
-              <td>customer services</td>
+              <th>catalog</th>
+              <th>about us</th>
+              <th>customer services</th>
             </tr>
             <tr>
               <td>necklaces</td>

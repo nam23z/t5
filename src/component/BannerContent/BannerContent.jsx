@@ -28,6 +28,9 @@ const StyledBannerContent = styled.div`
             padding: 55px 0;
         }
     }
+    .btn:hover{
+        background-color: #FF6F61;
+    }
     margin-top: 116px;
 `
 const BannerContent = () => {
@@ -38,6 +41,7 @@ const BannerContent = () => {
                 <img src={ZaraLogo2} alt="zaralogo2" />
                 <p>lustrous yet understated. the new evening wear collection exclusively offered at the reopened giorgio armani boutique in los angeles.</p>
                 <Button
+                    className="btn"
                     bgColor={"#FFFFFF"}
                     textColor={"#1E2832"}
                     fontSize={"29px"}
