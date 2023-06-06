@@ -7,7 +7,7 @@ import NewsLetter from "../../component/NewsLetter/NewsLetter";
 import BestSeller from "../../component/BestSeller/BestSeller";
 import ContactInstagram from "../../component/ContactInstagram/ContactInstagram";
 import Footer from "../../component/Footer/Footer";
-
+import ScrollToTop from "react-scroll-to-top";
 const StyledHome = styled.div`
 width: 100%;
 `
@@ -22,6 +22,7 @@ const Home = () => {
             <BestSeller></BestSeller>
             <ContactInstagram></ContactInstagram>
             <Footer></Footer>
+            <ScrollToTop smooth />
         </StyledHome>
     )
 }

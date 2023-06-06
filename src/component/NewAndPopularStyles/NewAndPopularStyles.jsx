@@ -40,7 +40,6 @@ const NewAndPopularStyles = () => {
           sx={{ width: "100%", height: 648}}
           variant="quilted"
           cols={4}
-          // rowHeight={121}
             className="imglist"
           >
             <ImageListItem
