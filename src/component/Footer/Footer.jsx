@@ -57,6 +57,7 @@ const StyledFooter = styled.div`
       justify-content: space-between;
       align-items: center;
       .CtRight {
+        cursor: pointer;
         width: 9%;
         display: flex;
         justify-content: space-between;
