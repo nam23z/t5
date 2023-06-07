@@ -8,6 +8,7 @@ import BestSeller from "../../component/BestSeller/BestSeller";
 import ContactInstagram from "../../component/ContactInstagram/ContactInstagram";
 import Footer from "../../component/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
+import GridFour from "../../component/GridFour";
 const StyledHome = styled.div`
 width: 100%;
 .scrll:hover{
@@ -20,7 +21,7 @@ const Home = () => {
             <Header></Header>
             <Brand></Brand>
             <NewAndPopularStyles></NewAndPopularStyles>
-            <NewsLetter></NewsLetter>
+            <NewsLetter><GridFour/></NewsLetter>
             <BannerContent></BannerContent>
             <BestSeller></BestSeller>
             <ContactInstagram></ContactInstagram>
