@@ -12,6 +12,9 @@ import ImgProduct7 from "../../assets/imgProducts/image-product-7.svg";
 import { styled } from "styled-components";
 
 const StyledAllProductSlider = styled.div`
+.overlay{
+  width: 92.5%;
+}
   .bottomP{
     width: 312px;
   }

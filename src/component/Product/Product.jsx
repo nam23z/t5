@@ -1,5 +1,8 @@
 import { styled } from "styled-components";
 import { NumericFormat } from 'react-number-format';
+import {ReactComponent as Heart} from '../../assets/icons/heart.svg';
+import {ReactComponent as Search} from '../../assets/icons/searchThin.svg';
+import {ReactComponent as Shop} from '../../assets/icons/iconShoppingwhite.svg';
 const StyledProduct = styled.div`
     position: relative;
     font-family: 'Open Sans';
@@ -59,6 +62,47 @@ const StyledProduct = styled.div`
             margin-top: 0;
         }
     }
+    .overlay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    position: absolute;
+    bottom: 16%;
+    background-color: #1e2832;
+    color: #ffffff;
+    width: 100%;
+    opacity: 0;
+    z-index: 999;
+  }
+  .btL {
+    width: 36%;
+    display: inline-block;
+    padding-left: 12px;
+    .heart{
+        margin-right: 20%;
+    }
+  }
+  .btR {
+    /* position: absolute;
+    display: inline-block;
+    right: 2%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin-right: 4%;
+  }
+  .btR:hover{
+    cursor: pointer;
+    color: #FF6F61;
+    path{
+        fill: #FF6F61;
+    }
+  }
+  .imge:hover .overlay {
+    opacity: 1;
+    z-index: 999;
+  }
     margin-bottom: 24px;
 `
 const Product = ({image, name, cate, price, tag, sale, tagColor, children, ...rest}) => {
@@ -66,6 +110,11 @@ const Product = ({image, name, cate, price, tag, sale, tagColor, children, ...re
         <StyledProduct image={image} name={name} cate={cate} price={price} tag={tag} sale={sale} tagColor={tagColor} children={children} {...rest}>
             <div className="imge">
                 <img src={image} alt="img" />
+                <div className="overlay">
+                    
+              <p className="btL"><Heart className="heart"/><Search/></p>
+              <p className="btR"><Shop/>Shop Now</p>
+            </div>
             </div>
             <div className="name"><h6>{name}</h6></div>
             <div className="bottomP">
