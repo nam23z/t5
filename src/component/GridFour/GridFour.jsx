@@ -9,7 +9,6 @@ import ImgProduct4 from "../../assets/imgProducts/image-product-4.svg";
 import ImgProduct5 from "../../assets/imgProducts/image-product-5.svg";
 import ImgProduct6 from "../../assets/imgProducts/image-product-6.svg";
 import ImgProduct7 from "../../assets/imgProducts/image-product-7.svg";
-import Product2 from '../../assets/imgProducts/product2.svg';
 
 const StyledGridFour = styled.div`
   margin-top: 35px;
