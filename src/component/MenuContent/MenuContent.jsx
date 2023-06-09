@@ -1,9 +1,5 @@
 import * as React from "react";
 import { useState } from "react";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { Button } from "../Button/Button";
 import { styled } from "styled-components";
 import Container from "../Container/Container";
@@ -18,22 +14,23 @@ const StyledMenuContent = styled.div`
     text-align: center;
     margin-top: 140px;
   }
-
-  .nav1 {
+  .menu {
     display: flex;
     justify-content: space-between;
-    span {
+    align-items: center;
+  }
+  .nav1 {
+    display: flex;
+    gap: 40px;
+  }
+  .active {
+    font-weight: bold;
+  }
+  .itemMenu {
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    text-decoration: none;
-    opacity: 0.5;
-    color: #000000;
   }
-  span:hover {
+  .itemMenu:hover {
     color: #ff6f61;
-  }
   }
   .nav2 {
     font-family: "Open Sans";
@@ -50,51 +47,54 @@ const StyledMenuContent = styled.div`
       background-color: #ff6f61;
     }
   }
-  .Mui-selected{
+  /* .Mui-selected{
     color: #000000;
     font-weight: bold;
-  }
+  } */
 `;
+
+const data = [
+  {
+    cate: "All Products"
+  },
+  {
+    cate: "T-Shirt",
+  },
+  {
+    cate: "Hoodie",
+  },
+  {
+    cate: "Jacket"
+  }
+]
 const MenuContent = ({ title, children, parent }) => {
-  const [value, setValue] = useState(0);
+  const [isActive, setActive] = useState(0)
+  const handleClick = (key) => {
+    setActive(key);
+    console.log(key);
+  }
   return (
     <Container>
       <StyledMenuContent title={title}>
         <h2>{title}</h2>
-        <Box sx={{ width: "100%" }}>
-          <Grid
-            container
-            rowSpacing={1}
-            justifyContent={"space-between"}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          >
-            <Grid item xs={3.8}>
-              {/* <div className="nav1"> */}
-                <BottomNavigation
-                className="menu"
-                  showLabels
-                  value={value}
-                  onChange={(event, newValue) => {
-                    setValue(newValue);
-                  }}
-                >
-                  <BottomNavigationAction label="All Products"/>
-                  <BottomNavigationAction label="T-Shirt"/>
-                  <BottomNavigationAction label="Hoodies"/>
-                  <BottomNavigationAction label="Jacket"/>
-                </BottomNavigation>
-              {/* </div> */}
-            </Grid>
-            <Grid item xs={1.04}>
-              <div className="nav2">
-                <Button className="btn" width={"92px"} height={"32px"}
-                >
-                  {children}
-                </Button>
-              </div>
-            </Grid>
-          </Grid>
-        </Box>
+        <div className="menu">
+          <div className="nav1">
+            {data.map((e, key) => {
+              return(
+              <span
+              onClick={() => handleClick(key)}
+              className={`itemMenu ${key === isActive ? "active" : ""}`}>
+                {e.cate}
+              </span>
+              )
+            })}
+          </div>
+          <div className="nav2">
+            <Button className="btn" width={"92px"} height={"32px"}>
+              {children}
+            </Button>
+          </div>
+        </div>
       </StyledMenuContent>
     </Container>
   );

@@ -91,33 +91,6 @@ const fakedata = [
     tag: "",
     sale: "",
     tagColor:""
-  },
-  {
-    image: Product2,
-    name:"Nike Repel Miler",
-    cate:"Jacket",
-    price:220.0,
-    tag:"SALE",
-    sale:198.0,
-    tagColor:"#1E2832",
-  },
-  {
-    image: Product2,
-    name:"Nike Repel Miler",
-    cate:"Jacket",
-    price:220.0,
-    tag:"SALE",
-    sale:198.0,
-    tagColor:"#1E2832",
-  },
-  {
-    image: Product2,
-    name:"Nike Repel Miler",
-    cate:"Jacket",
-    price:220.0,
-    tag:"SALE",
-    sale:198.0,
-    tagColor:"#1E2832",
   }
 ];
 const GridFour = () => {

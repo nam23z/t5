@@ -16,6 +16,12 @@ const StyledSliderMulti = styled.div`
     position: relative;
     margin-top: 35px;
     width: 100%;
+    .overlay{
+      bottom: 0;
+    }
+    .bottomP{
+      width: 92%;
+    }
     .slick-list{
       width: 102%;
     }

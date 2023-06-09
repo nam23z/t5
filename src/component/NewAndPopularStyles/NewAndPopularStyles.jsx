@@ -1,6 +1,4 @@
 import * as React from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 // imglist
 import { styled } from "styled-components";
 import Container from "../Container/Container";
@@ -11,7 +9,6 @@ import Product3 from "../../assets/imgProducts/product3.svg";
 import Product4 from "../../assets/imgProducts/product4.svg";
 
 const StyledNewAndPopular = styled.div`
-  position: relative;
   width: 100%;
   h3 {
     font-family: "Roboto";
@@ -22,21 +19,48 @@ const StyledNewAndPopular = styled.div`
     text-transform: uppercase;
     rotate: 270deg;
   }
-  .tit{
-    position: absolute;
-    left: -1.5%;
-    top: 40%;
-
+  .tit {
+    transform: translate(-36%, 952%);
   }
-  .MainContainer {
-    width: 1340px;
+  .imglist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding-right: 12px;
+  }
+  .column2 {
+    flex: 50%;
+    max-width: 50%;
+    padding-left: 12px;
+    .ImgItems:last-child {
+      padding-top: 20px;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column3 {
+    flex: 50%;
+    max-width: 50%;
+    padding-right: 12px;
+  }
+  .column4 {
+    flex: 50%;
+    max-width: 50%;
+    padding-left: 12px;
   }
   .ImgItems {
     cursor: pointer;
+    position: relative;
   }
   .overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 0.5%;
     background-color: #1e2832;
     color: #ffffff;
     width: 100%;
@@ -64,94 +88,61 @@ const NewAndPopularStyles = () => {
         <h3>explore new and popular styles</h3>
       </div>
       <Container>
-        <ImageList
-          sx={{ width: "100%", height: 648 }}
-          variant="quilted"
-          cols={4}
-          className="imglist"
-        >
-          <ImageListItem
-            className="ImgItems"
-            key={"prd"}
-            cols={2}
-            rows={2}
-            style={{
-              height: "648px",
-              width: "648px",
-            }}
-          >
-            <img src={Product} alt="product" loading="lazy" />
-            <div className="overlay">
-              <p className="name">Manto</p>
-              <p className="count">86 Product</p>
-            </div>
-          </ImageListItem>
-            <ImageListItem
-            className="ImgItems"
-              key={"prd"}
-              cols={1}
-              rows={1}
-              style={{
-                height: "312px",
-                width: "312px",
-              }}
-            >
-              <img src={Product4} alt="product" loading="lazy" />
+        <div className="imglist">
+
+          <div className="column">
+            <div className="ImgItems">
+              <img src={Product} alt="product" loading="lazy" />
               <div className="overlay">
-                <p className="name">Pants</p>
-                <p className="count">200 Product</p>
+                <p className="name">Manto</p>
+                <p className="count">86 Product</p>
               </div>
-            </ImageListItem>
-          <ImageListItem
-            className="ImgItems"
-            key={"prd"}
-            cols={1}
-            rows={1}
-            style={{
-              height: "312px",
-              width: "312px",
-              marginBottom: "20px",
-            }}
-          >
-            <img src={Product1} alt="product" loading="lazy" />
-            <div className="overlay">
-              <p className="name">Coat</p>
-              <p className="count">520 Product</p>
             </div>
-          </ImageListItem>
-          <ImageListItem
-          className="ImgItems"
-            key={"prd"}
-            cols={1}
-            rows={1}
-            style={{
-              height: "312px",
-              width: "312px",
-            }}
-          >
-            <img src={Product3} alt="product" loading="lazy" />
-            <div className="overlay">
-              <p className="name">Shirt</p>
-              <p className="count">320 Product</p>
-            </div>
-          </ImageListItem>
-            <ImageListItem
-              className="ImgItems"
-              key={"prd"}
-              cols={1}
-              rows={1}
-              style={{
-                height: "312px",
-                width: "312px",
-              }}
-            >
-              <img src={Product2} alt="product" loading="lazy" />
-              <div className="overlay">
-                <p className="name">Jacket</p>
-                <p className="count">103 Product</p>
+          </div>
+
+          <div className="column2">
+            <div className="row">
+
+              <div className="column3">
+              <div className="ImgItems">
+                <img src={Product4} alt="product" loading="lazy" />
+                <div className="overlay">
+                  <p className="name">Pants</p>
+                  <p className="count">200 Product</p>
+                </div>
               </div>
-            </ImageListItem>
-        </ImageList>
+
+                <div className="ImgItems">
+                  <img src={Product3} alt="product" loading="lazy" />
+                  <div className="overlay">
+                    <p className="name">Shirt</p>
+                    <p className="count">320 Product</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="column4">
+                <div className="ImgItems">
+                  <img src={Product1} alt="product" loading="lazy" />
+                  <div className="overlay">
+                    <p className="name">Coat</p>
+                    <p className="count">520 Product</p>
+                  </div>
+                </div>
+
+                <div className="ImgItems">
+                  <img src={Product2} alt="product" loading="lazy" />
+                  <div className="overlay">
+                    <p className="name">Jacket</p>
+                    <p className="count">103 Product</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </Container>
     </StyledNewAndPopular>
   );

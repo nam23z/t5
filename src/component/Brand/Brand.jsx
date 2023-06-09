@@ -10,7 +10,6 @@ const StyledBrand = styled.div`
     display: flex;
     justify-content: space-between;
     padding-top: 90px;
-    padding-bottom: 90px;
 `
 const Brand = () => {
     return(

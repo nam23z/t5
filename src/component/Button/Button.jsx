@@ -12,12 +12,13 @@ const StyledButton = styled.button`
   padding: ${props => props.padding};
   font-weight: ${props => props.fontWei};
   line-height: ${props => props.lineHei};
+  opacity: ${props => props.opacity};
   cursor: pointer;
   img {
     margin-right: 8px;
   }
 `;
-export const Button = ({ width, height, lineHei, textColor, fontFami,fontWei, bgColor, boderColor, padding, fontSize, borderRadius, children, ...rest }) => {
+export const Button = ({ width, height, opacity, lineHei, textColor, fontFami,fontWei, bgColor, boderColor, padding, fontSize, borderRadius, children, ...rest }) => {
   return <StyledButton 
     width={width}
     height={height}
@@ -30,6 +31,7 @@ export const Button = ({ width, height, lineHei, textColor, fontFami,fontWei, bg
     fontSize={fontSize}
     borderRadius={borderRadius}
     padding={padding}
+    opacity={opacity}
     {...rest}
     >
       {children}
